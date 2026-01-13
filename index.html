@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lead Contact Form</title>
+    <style>
+/* Wrapper */
+.enquiry-form-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color:#ffffff;
+  padding: 20px 20px;
+  border: 1px solid #ffffff;
+  border-radius:16px;
+}
+.enquiry-form-title
+{
+    text-align:center;
+    font-weight: bold;
+}
+
+/* Form Grid */
+.enquiry-form .ef-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+/* Field */
+.enquiry-form .ef-field {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Full width fields */
+.enquiry-form .ef-full {
+  grid-column: span 2;
+}
+
+/* Labels */
+.enquiry-form label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+/* Inputs */
+.enquiry-form input,
+.enquiry-form select,
+.enquiry-form textarea {
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  width: 100%;
+  background: #fff;
+}
+
+/* Focus state */
+.enquiry-form input:focus,
+.enquiry-form select:focus,
+.enquiry-form textarea:focus {
+  border-color: #2c5364;
+}
+
+/* Textarea */
+.enquiry-form textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+/* Submit Button */
+.enquiry-form .ef-submit {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.enquiry-form button {
+  background: #2c5364;
+  color: #fff;
+  padding: 14px 40px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.enquiry-form button:hover {
+  background: #203a43;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .enquiry-form .ef-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .enquiry-form .ef-full {
+    grid-column: span 1;
+  }
+}
+
+</style>  
+</head>
+<body>
+    <!-- Enquiry Form Start -->
+<div class="enquiry-form-wrapper">
+<h2 class="enquiry-form-title">Contact/Query Form</h2>
+<hr>
+  <form action="mail.php" method="POST" class="enquiry-form">
+
+    <div class="ef-grid">
+
+      <div class="ef-field">
+        <label>Name</label>
+        <input type="text" name="name" required placeholder="Enter your name">
+      </div>
+
+      <div class="ef-field">
+        <label>Email</label>
+        <input type="email" name="email" required placeholder="Enter your email">
+      </div>
+
+      <div class="ef-field">
+        <label>Mobile</label>
+        <input type="tel" name="mobile" required placeholder="Enter your mobile">
+      </div>
+
+      <div class="ef-field">
+        <label>Company Name</label>
+        <input type="text" name="company" placeholder="Enter your company">
+      </div>
+
+      <div class="ef-field">
+        <label>City</label>
+        <input type="text" name="city" placeholder="Enter your city">
+      </div>
+
+      <div class="ef-field">
+        <label>State</label>
+        <input type="text" name="state" placeholder="Enter your state">
+      </div>
+
+      <div class="ef-field ef-full">
+        <label>Your Area Space Is Around</label>
+        <select name="area" required>
+          <option value="">Select Area</option>
+          <option>More than 20,000 sq. ft</option>
+          <option>More than 50,000 sq. ft</option>
+          <option>More than 1,00,000 sq. ft</option>
+        </select>
+      </div>
+
+      <div class="ef-field ef-full">
+        <label>Requirements</label>
+        <textarea name="requirements" placeholder="Write your requirements"></textarea>
+      </div>
+
+    </div>
+
+    <div class="ef-submit">
+      <button type="submit">Submit Enquiry</button>
+    </div>
+
+  </form>
+
+</div>
+<!-- Enquiry Form End -->
+</body>
+</html>
